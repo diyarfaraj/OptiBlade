@@ -39,7 +39,8 @@ canvas {
 }
 
 #optimize {
-    background: rgb(73,164,73)
+    background: rgb(73,164,73);
+    margin-top: 10px;
 }
 
 #optimize:hover {
@@ -53,3 +54,9 @@ canvas {
  .removePart:hover {
      background: rgb(158,56,56);
  }
+
+ .cutWidth {
+    width: 50% !important;
+    float: right;
+  
+}
