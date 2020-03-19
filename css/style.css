@@ -45,3 +45,11 @@ canvas {
 #optimize:hover {
     background: rgb(53,128,53);
 }
+
+.removePart {
+    background: rgb(200,111,111); 
+ }
+ 
+ .removePart:hover {
+     background: rgb(158,56,56);
+ }
