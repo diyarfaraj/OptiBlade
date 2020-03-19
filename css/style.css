@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0 0;
+}
+#partList {
+    height: 419px;
+    margin-top: 22px;
+    margin-bottom: 14px;
+}
+#partTable {
+    height: 322px;
+    overflow-y: auto;
+}
+table {
+    width: 100%;
+}
+#clearList {} #infoDisplay {
+    width: 900px;
+    height: 150px;
+}
+#panelDiv {
+    width: 100%;
+}
+canvas {
+    display: block;
+    margin: 10px auto;
+}
+
+#clearPartList, 
+#clearPart,
+#clearPanel {
+    background: rgb(200,111,111); 
+}
+
+#clearPartList:hover, 
+#clearPart:hover,
+#clearPanel:hover {
+    background: rgb(158,56,56);
+}
+
+#optimize {
+    background: rgb(73,164,73)
+}
+
+#optimize:hover {
+    background: rgb(53,128,53);
+}
