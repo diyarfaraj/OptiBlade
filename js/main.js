@@ -46,6 +46,7 @@ Zepto(function($) {
 	var $pagerLeft = $('#pagerLeft');
 	var $pagerCenter = $('#pagerCenter');
 	var $pagerRight = $('#pagerRight');
+	var $cutWidth = $('#cutWidth');
 	var pagerIndex = 0;
 
 	// builds an array of parts
@@ -72,7 +73,12 @@ Zepto(function($) {
 	var drawRect = function(canvas, x, y, width, height) {
 		if (canvas.getContext) {
 			var ctx = canvas.getContext('2d');
+			ctx.strokeStyle = '#FF0000';
 			ctx.strokeRect(x, y, width, height);
+
+			ctx.fillStyle = '#FF0000';
+			ctx.fillText(panelWidth, x + width / 2, y + height);
+			ctx.fillText(panelHeight, x, y + height / 2);
 		}
 	};
 
@@ -197,6 +203,11 @@ Zepto(function($) {
 			material = $material.val();
 			thickness = $thickness.val();
 			$addPanel.html('Added');
+
+			//Diy-Display panel before added parts
+			/* optimize(partArray);
+
+			displayPanels(panels); */
 		}
 	});
 
@@ -267,6 +278,9 @@ Zepto(function($) {
 	});
 
 	$optimizeButton.on('click', function() {
+		//Diy-remove empty panl before drwing again
+		displayPanels(panels);
+
 		if ($addedParts.length > 0) {
 			partArray = [];
 			addToPartArray();
